@@ -28,14 +28,22 @@ class PlayerControllerTest {
                 .contentType(ContentType.JSON)
                 .body("{ \"players\": [ " +
                         "{ \"name\": \"Sub zero\", \"type\": \"expert\" }, " +
+                        "{ \"name\": \"Mario\",    \"type\": \"expert\" }, " +
+                        "{ \"name\": \"Luigi\",    \"type\": \"expert\" }, " +
+                        "{ \"name\": \"Yosh\",     \"type\": \"novice\" }, " +
                         "{ \"name\": \"Scorpion\", \"type\": \"novice\" }, " +
-                        "{ \"name\": \"Reptile\", \"type\": \"meh\" } ] }")
+                        "{ \"name\": \"Nyancat\",  \"type\": \"pokemon\" }, " +
+                        "{ \"name\": \"Reptile\",  \"type\": \"meh\" } ] }")
                 .post("/players")
                 .then()
                 .statusCode(201)
                 .assertThat().body("result[0]", equalTo("player Sub zero stored in DB"))
-                             .body("result[1]", equalTo("player Scorpion sent to Kafka topic"))
-                             .body("result[2]", equalTo("player Reptile did not fit"));
+                             .body("result[1]", equalTo("player Mario stored in DB"))
+                             .body("result[2]", equalTo("player Luigi stored in DB"))
+                             .body("result[3]", equalTo("player Yosh sent to Kafka topic"))
+                             .body("result[4]", equalTo("player Scorpion sent to Kafka topic"))
+                             .body("result[5]", equalTo("player Nyancat did not fit"))
+                             .body("result[6]", equalTo("player Reptile did not fit"));
     }
 
     @Test
