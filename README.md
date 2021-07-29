@@ -1,5 +1,4 @@
 <p align="center">
-  <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/631px-Apache_kafka.svg.png"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/631px-Apache_kafka.svg.png" alt="kafka-logo" style="height: 100px; margin-right: 10px"></a>
   <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/320px-Spring_Framework_Logo_2018.svg.png"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/320px-Spring_Framework_Logo_2018.svg.png" style="height: 100px" alt="SpringLogo"></a>
 </p>
 <p align="center">
